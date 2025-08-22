@@ -9,7 +9,7 @@ I'm an aspiring self-taught developer currently learning the ropes of web develo
 ## 🚀 I/Me?
 - ⛷️ 12th graduate.
 - 📚 Learning various programing languages.
-- 📫 You can reach me on *Discord* (@T0mzyy),
+- 📫 You can reach me on *Discord* (@t0mzyi),
 
 ## 🛠️ Stack
 - *Python*
@@ -18,8 +18,8 @@ I'm an aspiring self-taught developer currently learning the ropes of web develo
 
 ## ⏳ Stats
 <p align = "center">
-    <img align = "center" src = "https://streak-stats.demolab.com/?user=T0mzyy&theme=transparent" /> <br/> <br/>
-    <img align = "center" height = "200"  src = "https://github-readme-stats.vercel.app/api?username=T0mzyy&show_icons=true&include_all_commits=true&count_private=true&rank_icon=github&theme=transparent" />
-    <img align = "center" height= "200" src="https://github-readme-stats.vercel.app/api/top-langs?username=T0mzyy&layout=compact&langs_count=8&card_width=320&theme=transparent" />
+    <img align = "center" src = "https://streak-stats.demolab.com/?user=t0mzyi&theme=transparent" /> <br/> <br/>
+    <img align = "center" height = "200"  src = "https://github-readme-stats.vercel.app/api?username=t0mzyi&show_icons=true&include_all_commits=true&count_private=true&rank_icon=github&theme=transparent" />
+    <img align = "center" height= "200" src="https://github-readme-stats.vercel.app/api/top-langs?username=t0mzyi&layout=compact&langs_count=8&card_width=320&theme=transparent" />
 </p>
 
