@@ -212,5 +212,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     initScrollAnimations();
     
-    console.log('Enhanced portfolio script loaded!');
+    console.log('heheheheheh');
 });
