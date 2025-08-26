@@ -348,24 +348,29 @@
                         
                     </div>
                 </div>
-                <form action="https://formspree.io/f/movlgebq" class="contact-form" id="contact-form" method="POST">
+                <form action="https://formspree.io/f/movlgebq" class="contact-form" id="contact-form" method="POST" novalidate>
                     <div class="form-group">
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" class="error" required>
                         <label for="name">Your Name</label>
+                        <div class="error-message"></div>
                     </div>
                     <div class="form-group">
                         <input type="email" id="email" name="email" required>
                         <label for="email">Your Email</label>
+                        <div class="error-message"></div>
                     </div>
                     <div class="form-group">
                         <input type="text" id="subject" name="subject" required>
                         <label for="subject">Subject</label>
+                        <div class="error-message"></div>
                     </div>
                     <div class="form-group">
                         <textarea id="message" name="message" rows="5" required></textarea>
                         <label for="message">Your Message</label>
+                        <div class="error-message"></div>
                     </div>
                     <button type="submit" class="btn btn-primary">Send Message</button>
+                    <div id="form-status"></div>
                 </form>
             </div>
         </div>
