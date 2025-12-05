@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=DotGothic16&display=swap');
+
+:root {
+    --bg-color: #E6E6E6;
+    --surface-color: #F0F0F0;
+    /* Slightly lighter/different from bg */
+    --text-primary: #111111;
+    --text-secondary: #555555;
+    --accent-red: #D71920;
+    --border-color: #CCCCCC;
+    --glass-bg: rgba(255, 255, 255, 0.4);
+    --glass-border: rgba(255, 255, 255, 0.3);
+
+    --bg-inverse: #000000;
+    --text-inverse: #FFFFFF;
+
+    --font-dot: 'DotGothic16', sans-serif;
+}
+
+body.dark-mode {
+    --bg-color: #111111;
+    --surface-color: #1a1a1a;
+    --text-primary: #f0f0f0;
+    --text-secondary: #aaaaaa;
+    --border-color: #333333;
+    --glass-bg: rgba(0, 0, 0, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.1);
+
+    --bg-inverse: #222222;
+    --text-inverse: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+    /* Prevent native scroll whole page */
+    transition: background-color 0.5s ease;
+}
+
+body.dark-mode {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+/* Scroll Container */
+.horizontal-track {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 100vh;
+    width: max-content;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    transition: transform 2.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: transform;
+}
+
+.panel {
+    min-width: 100vw;
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+    position: relative;
+    border-right: 1px dashed var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 4rem;
+    pointer-events: auto;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Section Backgrounds (Controlled by Theme) */
+#p1 {
+    background-color: var(--bg-color);
+    justify-content: center;
+    /* Center Hero vertically */
+    overflow: hidden;
+    /* Prevent scrollbar on Hero */
+}
+
+#p4 {
+    background-color: var(--bg-color);
+}
+
+/* Text Cycler Cursor */
+.type-cursor {
+    display: inline-block;
+    width: 0.5em;
+    height: 1em;
+    background-color: var(--accent-red);
+    vertical-align: middle;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+#p2 {
+    background-color: var(--surface-color);
+}
+
+#p3 {
+    background-color: var(--bg-color);
+}
+
+/* Contact Section is unique */
+#p5 {
+    background-color: var(--bg-inverse);
+    color: var(--text-inverse);
+}
+
+/* Navigation Fixed Overlay */
+.fixed-nav {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    right: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    pointer-events: none;
+    /* Let clicks pass */
+}
+
+.logo {
+    font-family: var(--font-dot);
+    font-size: 1.5rem;
+    background: var(--accent-red);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    pointer-events: auto;
+}
+
+.nav-indicators {
+    font-family: var(--font-dot);
+    background: var(--surface-color);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    pointer-events: auto;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* RESPONSIVE NAV */
+@media (max-width: 768px) {
+    .fixed-nav {
+        top: 1rem;
+        left: 1rem;
+        right: 1rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .nav-indicators {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+        gap: 0.5rem;
+    }
+}
+
+/* --- COMPONENTS --- */
+
+.n-btn {
+    display: inline-block;
+    font-family: var(--font-dot);
+    font-size: 1.25rem;
+    /* ~text-xl */
+    text-decoration: none;
+    color: var(--accent-red);
+    border: 1px solid var(--accent-red);
+    padding: 0.75rem 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.n-btn:hover {
+    background: var(--accent-red);
+    color: white;
+}
+
+.label {
+    font-family: var(--font-dot);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* REVEAL ANIMATIONS */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(10px);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+/* Stagger Delays */
+.reveal-delay-1 {
+    transition-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+    transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+    transition-delay: 0.3s;
+}
+
+.reveal-delay-4 {
+    transition-delay: 0.4s;
+}
+
+/* --- GLASS PANEL --- */
+.glass-panel {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+}
+
+/* --- PROJECT STACKS (Interactive Folders) --- */
+.folder-container {
+    display: flex;
+    gap: 6rem;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.folder-group {
+    position: relative;
+    width: 280px;
+    height: 200px;
+    /* Base height */
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+/* The visual Folder Cover */
+.folder-cover {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: var(--surface-color);
+    border: 2px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.folder-group:hover .folder-cover {
+    transform: translateY(-10px);
+}
+
+/* Folder Tab */
+.folder-cover::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: -2px;
+    width: 40%;
+    height: 14px;
+    background: var(--surface-color);
+    border: 2px solid var(--border-color);
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+}
+
+/* File Cards (Hidden initially) */
+.file-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f0f0f0;
+    border: 1px solid var(--border-color);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    opacity: 0;
+    transform: translateY(0) scale(0.95);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    font-family: var(--font-dot);
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+/* Dark Mode Stack Colors */
+body.dark-mode .file-card {
+    background: #222;
+    color: white;
+    border-color: #444;
+}
+
+/* Hover Interaction: FAN OUT */
+.folder-group:hover .file-card:nth-child(2) {
+    transform: translateY(110%) rotate(-2deg);
+    opacity: 1;
+    z-index: 12;
+}
+
+/* --- PROJECT STACKS (Radial Dock) --- */
+.folder-container {
+    display: flex;
+    gap: 10rem;
+    /* Wide gap for radial satellites */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-top: 0;
+}
+
+.folder-group {
+    position: relative;
+    width: 200px;
+    height: 160px;
+    perspective: 1000px;
+}
+
+/* Base Scale Variable */
+.folder-group {
+    --base-scale: 1;
+}
+
+.folder-cover {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background: var(--surface-color);
+    border: 2px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+}
+
+.folder-group:hover .folder-cover {
+    transform: scale(1.1);
+    /* Pop effect */
+    border-color: var(--accent-red);
+}
+
+.folder-cover::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 35%;
+    height: 12px;
+    background: var(--surface-color);
+    border: 2px solid var(--border-color);
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+}
+
+/* File Cards (Satellites) */
+.file-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 90px;
+    margin-left: -60px;
+    /* Center offset */
+    margin-top: -45px;
+
+    background: #f8f8f8;
+    border: 1px solid var(--border-color);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    /* PEAK STATE: Slightly visible, small, offset upwards */
+    transform: translate(0, -50px) scale(0.4);
+    transition:
+        transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+        opacity 0.5s ease;
+
+    opacity: 0.4;
+    /* Visible Peek */
+    font-family: var(--font-dot);
+    font-size: 0.8rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    pointer-events: none;
+    /* Not clickable in peek state */
+}
+
+body.dark-mode .file-card {
+    background: #222;
+    color: white;
+    border-color: #444;
+}
+
+/* Hover OR Active State: Reveal and Position */
+.folder-group:hover .file-card,
+.folder-group.active .file-card {
+    opacity: 1;
+    pointer-events: auto;
+    --s: 1;
+}
+
+/* Hover/Active on Folder Cover */
+.folder-group:hover .folder-cover,
+.folder-group.active .folder-cover {
+    transform: scale(1.1);
+    border-color: var(--accent-red);
+}
+
+/* SATELLITE POSITIONS (Top Semicircle) */
+/* Left */
+.folder-group:hover .file-card:nth-of-type(1),
+.folder-group.active .file-card:nth-of-type(1) {
+    --tx: -130px;
+    --ty: -80px;
+    transition-delay: 0s;
+    transform: translate(var(--tx), var(--ty)) scale(var(--s, 1));
+}
+
+/* Top */
+.folder-group:hover .file-card:nth-of-type(2),
+.folder-group.active .file-card:nth-of-type(2) {
+    --tx: 0px;
+    --ty: -140px;
+    transition-delay: 0.05s;
+    transform: translate(var(--tx), var(--ty)) scale(var(--s, 1));
+}
+
+/* Right */
+.folder-group:hover .file-card:nth-of-type(3),
+.folder-group.active .file-card:nth-of-type(3) {
+    --tx: 130px;
+    --ty: -80px;
+    transition-delay: 0.1s;
+    transform: translate(var(--tx), var(--ty)) scale(var(--s, 1));
+}
+
+/* MOBILE ADJUSTMENTS */
+@media (max-width: 768px) {
+    .folder-container {
+        gap: 2rem;
+        flex-direction: column;
+    }
+
+    .folder-group {
+        margin-bottom: 6rem;
+        /* Space for satellites */
+    }
+
+    /* Smaller Orbit Radius for Mobile */
+    .folder-group:hover .file-card:nth-of-type(1),
+    .folder-group.active .file-card:nth-of-type(1) {
+        --tx: -100px;
+        --ty: -70px;
+    }
+
+    .folder-group:hover .file-card:nth-of-type(2),
+    .folder-group.active .file-card:nth-of-type(2) {
+        --tx: 0px;
+        --ty: -110px;
+    }
+
+    .folder-group:hover .file-card:nth-of-type(3),
+    .folder-group.active .file-card:nth-of-type(3) {
+        --tx: 100px;
+        --ty: -70px;
+    }
+}
+
+/* --- DARK MODE FIXES (Specific) --- */
+body.dark-mode .hero-content span.text-transparent {
+    /* Gradient text is handled by Tailwind classes, but fallback */
+}
+
+body.dark-mode .label {
+    color: #888;
+}
+
+body.dark-mode .glass-panel {
+    background: rgba(0, 0, 0, 0.6);
+    border-color: #444;
+}
