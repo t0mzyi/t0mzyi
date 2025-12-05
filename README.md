@@ -1,25 +1,81 @@
-## Hey sup I'm Jaideepdev 
-###### [No Protfolio website currently] :)
+<!-- 🌟 HEADER -->
+<h1 align="center">Hi there, I'm Jaideepdev 👋</h1>
+<h3 align="center">Currently learning MERN stack</h3>
 
-[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-0e76a8?style=for-the-badge&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/jaideep-dev-2a26a8356/)[![Instagram Badge](https://img.shields.io/badge/-Instagram-e4405f?style=for-the-badge&logo=Instagram&logoColor=white)](https://www.instagram.com/jeidweeep/)[![Discord Badge(809741916031811595)](https://img.shields.io/badge/Discord-%235865F2.svg)](https://discord.com/users/809741916031811595)
-
-I'm an aspiring self-taught developer currently learning the ropes of web development and app building. So far, I’ve built a Discord bot and I’m diving deeper into tools like Python, JavaScript/TypeScript (MERN, Svelte, etc.), and C# with Unity and Godot. I’m also into creative tech—editing videos in DaVinci Resolve and working with Photoshop for photography and digital design. My goal is to blend creativity with code to build immersive experiences across web, games, and beyond.
-
-
-## 🚀 I/Me?
-- ⛷️ 12th graduate.
-- 📚 Learning various programing languages.
-- 📫 You can reach me on *Discord* (@t0mzyi),
-
-## 🛠️ Stack
-- *Python*
-    - Discord.py.
-- Currently learning Java
-
-## ⏳ Stats
-<p align = "center">
-    <img align = "center" src = "https://streak-stats.demolab.com/?user=t0mzyi&theme=transparent" /> <br/> <br/>
-    <img align = "center" height = "200"  src = "https://github-readme-stats.vercel.app/api?username=t0mzyi&show_icons=true&include_all_commits=true&count_private=true&rank_icon=github&theme=transparent" />
-    <img align = "center" height= "200" src="https://github-readme-stats.vercel.app/api/top-langs?username=t0mzyi&layout=compact&langs_count=8&card_width=320&theme=transparent" />
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Poppins&size=22&pause=1000&color=00C2FF&center=true&vCenter=true&width=500&lines=Welcome+to+my+GitHub!;I+love+building+cool+things+🚀;JavaScript+%7C+NodeJS+%7C+React+%7C+MongoDB" />
 </p>
 
+---
+
+## 🌐 **Socials**
+<p align="left">
+  <a href="#"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/LinkedIn-%230A66C2.svg?logo=linkedin&logoColor=white" /></a>
+  <a href="#"><img src="https://img.shields.io/badge/Portfolio-000000?style=flat&logo=About.me&logoColor=white" /></a>
+</p>
+
+---
+
+## 🛠️ **Tech Stack**
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=js,ts,nodejs,react,express,mongodb,html,css,tailwind,git,github,figma" />
+</p>
+
+---
+
+# 📊 **My GitHub Analytics**
+
+### 🔥 Streak Stats
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=<USERNAME>&theme=tokyonight&hide_border=true" />
+</p>
+
+### 📈 GitHub Activity Graph
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=<USERNAME>&theme=react-dark&hide_border=true" />
+</p>
+
+### ⭐ GitHub Stats
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=<USERNAME>&show_icons=true&theme=tokyonight&hide_border=true" height="150" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=<USERNAME>&layout=compact&theme=tokyonight&hide_border=true" height="150" />
+</p>
+
+---
+
+# 🏆 GitHub Trophies
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=<USERNAME>&theme=onedark&no-frame=true&margin-w=10" />
+</p>
+
+---
+
+## 📦 **Random Dev Quote**
+<p align="center">
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" />
+</p>
+
+---
+
+## 🐍 **Contribution Snake**
+<p align="center">
+  <img src="https://raw.githubusercontent.com/<USERNAME>/<USERNAME>/output/snake.svg" />
+</p>
+
+---
+
+## 🎯 **Fun Stats**
+- 🌟 Projects built: **20+**
+- 🧠 Learning: **Node.js, system design**
+- 😄 Fun fact: **I debug better at 2 AM**
+
+---
+
+## 📫 **Contact Me**
+📧 Email: **yourmail@example.com**  
+💬 DM me anytime — always open to collaboration!
+
+---
+
+<p align="center">⭐ If you like my work, consider giving a star to my repositories!</p>
