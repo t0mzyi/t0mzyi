@@ -45,6 +45,11 @@ body {
     overflow: hidden;
     /* Prevent native scroll whole page */
     transition: background-color 0.5s ease;
+    height: 100dvh;
+    /* Fix mobile height */
+    width: 100vw;
+    position: fixed;
+    /* Lock body */
 }
 
 body.dark-mode {
@@ -56,7 +61,8 @@ body.dark-mode {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    height: 100vh;
+    height: 100dvh;
+    /* Match viewport exact */
     width: max-content;
     overflow-x: hidden;
     overflow-y: hidden;
