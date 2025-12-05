@@ -1,403 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>its me.</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>PORTFOLIO(3.0)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'accent-red': '#D71920',
+                        'bg-color': 'var(--bg-color)',
+                    },
+                    fontFamily: {
+                        'dot': ['DotGothic16', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #E6E6E6;
+            font-family: 'Inter', sans-serif;
+            touch-action: none;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">jaideepdev</a>
-            </div>
-            <ul class="nav-menu" id="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background">
-                <div class="gradient-orb orb-1"></div>
-                <div class="gradient-orb orb-2"></div>
-                <div class="gradient-orb orb-3"></div>
-                <div class="particle-field">
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                    <div class="particle"></div>
-                </div>
-                <div class="neural-network">
-                    <svg class="neural-svg" viewBox="0 0 800 600">
-                        <defs>
-                            <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.3" />
-                                <stop offset="100%" style="stop-color:#A78BFA;stop-opacity:0.1" />
-                            </linearGradient>
-                        </defs>
-                        <g class="neural-connections">
-                            <line class="neural-line" x1="100" y1="150" x2="300" y2="100" stroke="url(#neuralGradient)" stroke-width="2"/>
-                            <line class="neural-line" x1="100" y1="250" x2="300" y2="200" stroke="url(#neuralGradient)" stroke-width="2"/>
-                            <line class="neural-line" x1="300" y1="100" x2="500" y2="180" stroke="url(#neuralGradient)" stroke-width="2"/>
-                            <line class="neural-line" x1="300" y1="200" x2="500" y2="280" stroke="url(#neuralGradient)" stroke-width="2"/>
-                            <line class="neural-line" x1="500" y1="180" x2="700" y2="230" stroke="url(#neuralGradient)" stroke-width="2"/>
-                        </g>
-                        <g class="neural-nodes">
-                            <circle class="neural-node" cx="100" cy="150" r="6" fill="#8B5CF6"/>
-                            <circle class="neural-node" cx="100" cy="250" r="6" fill="#8B5CF6"/>
-                            <circle class="neural-node" cx="300" cy="100" r="8" fill="#A78BFA"/>
-                            <circle class="neural-node" cx="300" cy="200" r="8" fill="#A78BFA"/>
-                            <circle class="neural-node" cx="500" cy="180" r="8" fill="#C4B5FD"/>
-                            <circle class="neural-node" cx="500" cy="280" r="8" fill="#C4B5FD"/>
-                            <circle class="neural-node" cx="700" cy="230" r="10" fill="#8B5CF6"/>
-                        </g>
-                    </svg>
-                </div>
+    <!-- Fixed Overlay Nav -->
+    <div class="fixed-nav">
+        <div class="logo">JAIDEP_DEV( )</div>
+        <div class="nav-indicators">
+            <button id="theme-btn" class="theme-toggle" onclick="toggleTheme()">[ LIGHT_MODE ]</button>
+            <span id="progress">01</span> // END
+        </div>
+    </div>
+
+    <!-- Horizontal Scroll Wrapper -->
+    <div class="horizontal-track" id="track">
+
+        <!-- 01 HERO -->
+        <section class="panel" id="p1">
+            <!-- Decorative Corners (Absolute) -->
+            <div
+                class="absolute top-4 left-4 w-4 h-4 border-t border-l border-black dark:border-white opacity-50 md:block hidden">
             </div>
-        <div class="hero-container">
-            <div class="hero-content fade-in">
-                <h1 class="hero-title">
-                    <span class="hero-greeting">hey I'm</span>
-                    <span class="hero-name" data-text="Jaideep dev">Jaideepdev</span>
-                    <span class="hero-role">
-                        <span class="typing-container">
-                            <span class="typing-text" data-words="Aspiring Developer,Artist,Editor,Creator"></span>
-                    </span>
+            <div
+                class="absolute bottom-4 right-4 w-4 h-4 border-b border-r border-black dark:border-white opacity-50 md:block hidden">
+            </div>
+
+            <div
+                class="hero-content relative z-10 w-full max-w-6xl mx-auto flex flex-col items-center md:items-start text-center md:text-left px-4">
+
+                <!-- Status Badge -->
+                <div class="flex items-center gap-2 mb-6 opacity-60 reveal">
+                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                    <span class="font-dot text-xs md:text-sm tracking-widest">SYSTEM_ONLINE // V3.0.1</span>
+                </div>
+
+                <span class="label text-xl md:text-2xl mb-2 font-dot text-accent-red reveal reveal-delay-1">[
+                    HELLO_WORLD ]</span>
+
+                <h1
+                    class="text-5xl md:text-8xl lg:text-9xl font-bold leading-[0.9] mb-6 font-dot tracking-tighter reveal reveal-delay-2">
+                    <span id="hero-name">JAIDEEPDEV</span><br>
+                    <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-black to-gray-500 dark:from-white dark:to-gray-500"></span>
                 </h1>
-                
-                <div class="hero-buttons">
-                    
-                    <a  id="about-me"href="#about" class="btn btn-secondary ">About me.</a>
-                </div>
-            </div>
-            
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-dot"></div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Aspiring developer with a love for clean code &lt;3</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-intro">
-                       Hello there! My name is Jaideepdev. I’m a web developer, artist, and video editor and above all, a passionate self-taught learner who loves creating and exploring new ideas
-                    </p>
-                    <p>
-                        I'm always on the look out for opportunities that could broaden and enhance my skillset. I enjoy working on challenging projects and love collaborating with others to bring their ideas to life.
-                    </p>
-                   
-                    <div class="about-stats">
-                        <!--<div class="stat-item">
-                            <div class="stat-number counter" data-target="2000">0</div>
-                            <div class="stat-label">Hours Self-Learning</div>
-                        </div>-->
-                        <div class="stat-item">
-                            <div class="stat-number counter" data-target="3">0</div>
-                            <div class="stat-label">Projects Built</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number counter" data-target="8">0</div>
-                            <div class="stat-label">Technologies Learned</div>
-                        </div>
-                    </div>
-                </div>
-                <!--<div class="about-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-user"></i>
-                    </div>-->
-                </div>
-            </div>
-        </div>
-    </section>
+                <p
+                    class="text-base md:text-lg max-w-xl font-sans mb-10 text-secondary leading-relaxed reveal reveal-delay-3">
+                    Crafting digital experiences that merge <span class="border-b border-accent-red">raw function</span>
+                    with brutalist aesthetics.
+                    Specializing in high-performance web applications and interactive design.
+                </p>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Skills & Expertise</h2>
-                <p class="section-subtitle">Technologies I work with</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-html5"></i>
-                            <span>HTML5</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-css3-alt"></i>
-                            <span>CSS3</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-js"></i>
-                            <span>JS</span>
-                        </div>
-                    
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-java"></i>
-                            <span>Java</span>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-git-alt"></i>
-                            <span>Git</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-intellij-plain"></i>
-                            <span>Intelij</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-code"></i>
-                            <span>VS Code</span>
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                <!-- Action Grid -->
+                <div class="flex flex-col md:flex-row gap-6 items-center reveal reveal-delay-4">
+                    <a href="#" class="n-btn text-lg md:text-xl group" onclick="scrollToPanel('p3')">
+                        [ VIEW_PROJECTS ]
+                        <span class="group-hover:translate-x-1 transition-transform">-></span>
+                    </a>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Some of my recent work</p>
+                    <div class="flex gap-4 text-xs font-dot opacity-50">
+                        <span>LAT: 10.5276° N</span>
+                        <span>//</span>
+                        <span>LON: 76.2144° E</span>
+                    </div>
+                </div>
             </div>
-            <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web">Web Apps</button>
-                
+
+            <!-- Large Decorative Text -->
+            <div
+                class="absolute bottom-0 right-0 md:right-10 opacity-[0.03] dark:opacity-[0.05] pointer-events-none select-none">
+                <span class="text-[20vw] font-bold font-dot text-black dark:text-white leading-none">
+                    JAIDEEP
+                </span>
             </div>
-            <div class="projects-grid">
-                <div class="project-card" data-category="web">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://t0mzyy.github.io/QR-generattor/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                                <a href="https://github.com/T0mzyy/QR-generattor" class="project-link"><i class="fab fa-github"></i></a>
+        </section>
+
+        <!-- 02 ABOUT (Identity) -->
+        <section class="panel" id="p2">
+            <div
+                class="manifesto-grid flex flex-col md:grid md:grid-cols-[0.8fr_1.2fr] gap-8 md:gap-12 items-center w-full max-w-6xl mx-auto px-6 md:px-12 h-full justify-center">
+                <!-- Tailwind Grid -->
+                <!-- Left: Header -->
+                <div class="podcast-header text-center md:text-left w-full">
+                    <div class="waveform-anim justify-center md:justify-start reveal">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <span class="label text-xl md:text-2xl mb-2 block reveal reveal-delay-1">JAIDEEPDEV //
+                        PROFILE</span>
+                    <h2 class="text-4xl md:text-6xl font-bold font-dot reveal reveal-delay-2">ORIGIN<br>STORY</h2>
+
+                    <div class="meta-badges reveal reveal-delay-3 flex justify-center md:justify-start gap-4 mt-8">
+                        <span>[ THRISSUR🐘 / KERALA / INDIA ]</span> <span>[ EST. 2007 ]</span>
+                    </div>
+                </div>
+
+                <!-- Right: Narration -->
+                <div
+                    class="transcript-container glass-panel reveal reveal-delay-2 w-full mt-8 md:mt-0 border-l-4 border-accent-red pl-6">
+                    <div class="podcast-transcript text-left space-y-8">
+                        <!-- Chapter 1: Identity -->
+                        <div class="transcript-block group">
+                            <span
+                                class="timestamp text-accent-red font-dot text-xs tracking-widest block mb-2 opacity-70">00:00:10
+                                // IDENTITY_VERIFIED</span>
+                            <div class="text-xl md:text-2xl leading-relaxed font-sans">
+                                My name is <span id="about-name"
+                                    class="font-dot text-3xl md:text-4xl uppercase font-bold text-black dark:text-white block my-2">Jaideep</span>
+                                I am an <span
+                                    class="bg-accent-red text-white px-2 py-0.5 font-dot text-lg rounded-sm transform -skew-x-6 inline-block">18-YEAR-OLD</span>
+                                <span class="font-bold border-b-2 border-black dark:border-white">creative
+                                    developer</span> from India.
+                                <br><br>
+                                <span class="opacity-80">"Coding isn't just a job. It's my <em
+                                        class="text-accent-red font-serif italic text-2xl">language</em>."</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">QR-generattor</h3>
-                        <p class="project-description">
-                           This is a simple web-based QR Code Generator built using HTML, CSS, and JavaScript
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JS</span>
+
+                        <!-- Chapter 2: Background -->
+                        <div class="transcript-block">
+                            <span
+                                class="timestamp text-accent-red font-dot text-xs tracking-widest block mb-2 opacity-70">00:04:20
+                                // ORIGIN</span>
+                            <p class="text-lg text-secondary">
+                                <strong class="text-primary font-dot text-xl">>> STATUS:</strong> Just wrapped up Higher
+                                Secondary.
+                                Journey started <span class="font-mono bg-gray-200 dark:bg-gray-800 px-1 rounded">EST.
+                                    2006</span>.
+                                Self-taught. Built from the ground up.
+                            </p>
                         </div>
+
+                        <!-- Chapter 3: Mission -->
+                        <div class="transcript-block">
+                            <span
+                                class="timestamp text-accent-red font-dot text-xs tracking-widest block mb-2 opacity-70">00:08:45
+                                // MISSION_OBJECTIVE</span>
+                            <p class="text-lg">
+                                Specialize in the <span class="text-accent-red font-bold text-xl font-dot">MERN
+                                    STACK</span>.
+                                <br>
+                                Goal: <span class="italic font-serif">Social Impact</span> via code.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Player Footer -->
+                    <div
+                        class="player-controls mt-8 flex items-center gap-4 bg-black/5 dark:bg-white/5 p-3 rounded-lg border border-black/10">
+                        <span class="font-dot text-xs text-accent-red animate-pulse">● REC</span>
+                        <div class="seek-bar flex-grow bg-gray-300 h-0.5 rounded overflow-hidden">
+                            <div class="seek-fill bg-accent-red h-full" style="width: 45%;"></div>
+                        </div>
+                        <span class="font-dot text-xs opacity-50">VOL: 90%</span>
                     </div>
                 </div>
             </div>
-            <p class="section-subtitle mt-4 text-center">More to go</p>
-        </div>
-        
-    </section>
+        </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Experience</h2>
-                <p class="section-subtitle">My professional journey</p>
-            </div>
-            <div class="experience-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>MERN Stack Trainee</h3>
-                            <span class="timeline-company">Brototype</span>
-                            <span class="timeline-date">2025 - Present</span>
-                        </div>
-                        <p class="timeline-description">
-                            Currently learning and building projects using MongoDB, Express.js, React, and Node.js.
-                            Gaining hands-on experience by working on real-world projects and improving problem-solving skills
-                            Enhancing knowledge of JavaScript, OOP concepts, and web development fundamentals.
-                        </p>
-                        <div class="timeline-skills">
-                            <span>Javascript</span>
-                            <span>Web App development</span>
-                            <span>Problem Solving</span>
-                        </div>
+        <!-- 03 PROJECTS (FOLDERS) -->
+        <section class="panel" id="p3" style="min-width: 100vw;">
+            <span class="label reveal">:: 03_ARCHIVES ::</span>
+            <h2 class="reveal reveal-delay-1" style="margin-bottom: 2rem; text-align: center;">PROJECT_DIRECTORY</h2>
+
+            <div class="folder-container reveal reveal-delay-2 w-full">
+
+                <!-- STACK 1: DEVELOPMENT -->
+                <div class="folder-group">
+                    <!-- Cover -->
+                    <div class="folder-cover">
+                        <span class="text-6xl mb-2">📂</span>
+                        <span class="font-dot font-bold">DEV_PROJECTS</span>
+                        <span class="text-xs text-secondary mt-2">[ 3 FILES ]</span>
                     </div>
+
+                    <!-- Files -->
+                    <a href="#" class="file-card" onclick="openWindow('win-project1')">E-COMMERCE</a>
+                    <a href="#" class="file-card" onclick="openWindow('win-project2')">AI_DASHBOARD</a>
+                    <a href="#" class="file-card" onclick="openWindow('win-project3')">SaaS_LANDING</a>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Discord Bot Developer</h3>
-                            <span class="timeline-company">Freelance</span>
-                            <span class="timeline-date">2021 - 2023</span>
-                        </div>
-                        <p class="timeline-description">
-                            Developed multifunctional Discord-bot with many features for server management.
-                        </p>
-                        <div class="timeline-skills">
-                            <span>discord.py</span>
-                        </div>
+                <!-- STACK 2: CREATIVE -->
+                <div class="folder-group">
+                    <!-- Cover -->
+                    <div class="folder-cover">
+                        <span class="text-6xl mb-2">🎨</span>
+                        <span class="font-dot font-bold">CREATIVE_LAB</span>
+                        <span class="text-xs text-secondary mt-2">[ 3 FILES ]</span>
                     </div>
+
+                    <!-- Files -->
+                    <a href="#" class="file-card">CINEMATOGRAPHY</a>
+                    <a href="#" class="file-card">3D_ASSETS</a>
+                    <a href="#" class="file-card">UI_CONCEPTS</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 04 STACK (Matrix) -->
+        <section class="panel" id="p4" style="min-width: 100vw;">
+            <span class="label reveal">:: 04_CAPABILITIES ::</span>
+            <div style="display: flex; gap: 4rem; align-items: start;">
+                <div style="flex: 1;">
+                    <h2 class="reveal reveal-delay-1" style="font-size: 2.5rem;">TECH_STACK<br>MATRIX</h2>
+                </div>
+
+                <div class="matrix-grid" style="flex: 2;">
+                    <div class="matrix-cell reveal reveal-delay-1"><span>JS(ES6)</span></div>
+                    <div class="matrix-cell reveal reveal-delay-2"><span>REACT</span></div>
+                    <div class="matrix-cell reveal reveal-delay-3"><span>NEXT</span></div>
+                    <div class="matrix-cell reveal reveal-delay-4"><span>NODE</span></div>
+                    <div class="matrix-cell reveal reveal-delay-1"><span>FIGMA</span></div>
+                    <div class="matrix-cell reveal reveal-delay-2"><span>GSAP</span></div>
+                    <div class="matrix-cell reveal reveal-delay-3"><span>THREE</span></div>
+                    <div class="matrix-cell reveal reveal-delay-4"><span>SQL</span></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Let's work together on your next project</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <p>jaideepjoshy@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Phone</h4>
-                            <p>+91 8136909361</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Location</h4>
-                            <p>Thrissur,Kerala, India</p>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/jaideep-dev" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/t0mzyi" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="https://www.instagram.com/jaideeepdev/" class="social-link"><i class="fab fa-instagram"></i></a>
-                        
-                    </div>
+        <!-- 05 CONTACT -->
+        <section class="panel" id="p5" style="min-width: 100vw;">
+            <!-- Marquee Text -->
+            <div class="marquee-track">
+                <div class="marquee-content">
+                    LET'S BUILD SOMETHING UNIQUE :: OPEN FOR WORK :: CONTACT ME ::
+                    LET'S BUILD SOMETHING UNIQUE :: OPEN FOR WORK :: CONTACT ME ::
                 </div>
-                <form  class="contact-form" id="contact-form" novalidate>
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" class="error" required>
-                        <label for="name">Your Name</label>
-                        <div class="error-message"></div>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" required>
-                        <label for="email">Your Email</label>
-                        <div class="error-message"></div>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" required>
-                        <label for="subject">Subject</label>
-                        <div class="error-message"></div>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                        <label for="message">Your Message</label>
-                        <div class="error-message"></div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                    <div id="form-status"></div>
-                </form>
+            </div>
+
+            <div style="text-align: center; z-index: 2; margin-top: 4rem;">
+                <span class="label" style="color: #666;">:: TERMINATE ::</span>
+                <h1 style="font-size: 6vw; color: white;">HELLO@JAIDEP.DEV</h1>
+                <div style="margin-top: 4rem; display: flex; gap: 2rem; justify-content: center;">
+                    <a href="#" class="n-btn" style="border-color: white; color: white;">LINKEDIN</a>
+                    <a href="#" class="n-btn" style="border-color: white; color: white;">GITHUB</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- OS WINDOWS (Hidden by default) -->
+
+    <!-- Design Window -->
+    <div class="os-window" id="win-designs">
+        <div class="window-header">
+            <span>C:\PROJECTS\DESIGNS</span>
+            <div class="window-close" onclick="closeWindow('win-designs')">×</div>
+        </div>
+        <div class="window-content">
+            <div class="project-list-item">
+                <div>
+                    <h4>Neon E-Commerce</h4>
+                    <p>Minimalist brand identity design system.</p>
+                </div>
+                <span>FIGMA / 2024</span>
+            </div>
+            <div class="project-list-item">
+                <div>
+                    <h4>FinDash UI</h4>
+                    <p>Financial component library and documentation.</p>
+                </div>
+                <span>STORYBOOK / 2023</span>
+            </div>
+            <div class="project-list-item">
+                <div>
+                    <h4>Abstract Type</h4>
+                    <p>Experimental typography layouts.</p>
+                </div>
+                <span>ILLUSTRATOR / 2023</span>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2025 Jaideepdev. All rights reserved.</p>
-                <p>Designed & Developed with <i class="fas fa-heart"></i></p>
+    <!-- Stack Window -->
+    <div class="os-window" id="win-stack">
+        <div class="window-header">
+            <span>C:\PROJECTS\FULL_STACK</span>
+            <div class="window-close" onclick="closeWindow('win-stack')">×</div>
+        </div>
+        <div class="window-content">
+            <div class="project-list-item">
+                <div>
+                    <h4>SaaS Analytics Platform</h4>
+                    <p>Real-time data visualization dashboard.</p>
+                </div>
+                <span>NEXT.JS / D3</span>
+            </div>
+            <div class="project-list-item">
+                <div>
+                    <h4>ChatBot AI</h4>
+                    <p>Generative AI interface with history management.</p>
+                </div>
+                <span>NODE / OPENAI</span>
+            </div>
+            <div class="project-list-item">
+                <div>
+                    <h4>TaskFlow API</h4>
+                    <p>Kanban backend service with realtime sockets.</p>
+                </div>
+                <span>EXPRESS / SOCKET.IO</span>
             </div>
         </div>
-    </footer>
+    </div>
 
-    <script src="js/script.js"></script>
-    <script src="js/mail.js"></script>
-    <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-    (function(){
-       emailjs.init({
-         publicKey: "CFLXleyd7f8j4mNz7", 
-       });
-    })();
-    </script>
-
+    <script src="script.js"></script>
 </body>
+
 </html>
